@@ -40,7 +40,6 @@ const TopSellers = () => {
     <div
       className="p-5 mx-auto mt-14 border rounded shadow-sm
                     xs:hidden
-                    sm:w-auto
                     lg:w-[23rem]
                    
                     w-full max-w-sm

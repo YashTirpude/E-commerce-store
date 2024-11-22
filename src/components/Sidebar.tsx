@@ -76,12 +76,12 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 p-5 h-screen   ">
+    <div className="w-64 p-5 h-screen  xs:hidden sm:block ">
       <h1 className="text-2xl font-bold mb-10 mt-4 cursor-pointer ">
         React Store
       </h1>
 
-      <section className="">
+      <section>
         <input
           type="text"
           className="border-2 rounded  px-2 p-2 sm:mb-0"
