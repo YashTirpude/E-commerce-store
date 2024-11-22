@@ -103,7 +103,7 @@ const MainContent = () => {
   };
 
   return (
-    <section className="xl:w-[55rem] lg:w-[55rem] sm:w-[40rem] xs:w-[20rem] p-5">
+    <section className="xl:w-[55rem] lg:w-[55rem] md:w-full lg:ml-0 xs:ml-16  xs:mr-4 xs:w-[28rem]  p-5  flex justify-center">
       <div className="mb-5">
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="relative mb-5 mt-5">
@@ -141,7 +141,7 @@ const MainContent = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-4 xs:grid-cols-3 sm:gap-20 xs:gap-20  xs:w-[28rem]  sm:grid-cols-3 md:w-[40rem] md:ml-0 lg:w-[52rem] md:grid-cols-4 gap-5">
           {filteredProducts.map((product) => (
             <BookCard
               key={product.id}
@@ -153,7 +153,7 @@ const MainContent = () => {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between items-center mt-5">
+        <div className="flex flex-col xs:flex-row  sm:flex-row justify-between items-center mt-5">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}

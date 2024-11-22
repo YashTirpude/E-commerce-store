@@ -2,20 +2,23 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import MainContent from "./components/MainContent";
 import ProductPage from "./components/ProductPage";
+import TopSellers from "./components/TopSellers";
+import PopularBlogs from "./components/PopularBlogs";
 
 function App() {
   return (
     <Router>
       <div className="flex h-screen">
         <Sidebar />
-        <div className="rounded w-full ml-9  flex justify-between flex-wrap">
+
+        <div className="rounded w-full   flex justify-center  flex-wrap">
           <Routes>
             <Route path="/" element={<MainContent />} />
             <Route path="/product/:id" element={<ProductPage />} />
           </Routes>
         </div>
         <div>
-          <label className="flex cursor-pointer gap-2">
+          <label className="flex justify-end pt-3   cursor-pointer gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -32,7 +35,7 @@ function App() {
             </svg>
             <input
               type="checkbox"
-              value="night"
+              value="luxury"
               className="toggle theme-controller"
             />
             <svg
@@ -49,6 +52,9 @@ function App() {
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </label>
+
+          <TopSellers />
+          <PopularBlogs />
         </div>
       </div>
     </Router>

@@ -32,10 +32,10 @@ const ProductPage: React.FC = () => {
   if (!product) return <div>Loading...</div>;
 
   return (
-    <div className="p-5 w-[60%]">
+    <div className="p-5 w-[60%] sm:w-[30rem]   xs:w-[25rem] pl-20 mt-16">
       <button
         onClick={() => navigate(-1)}
-        className="mb-5 px-4 py-2 bg-black text-white rounded"
+        className="   border px-4 py-2 mx-2 rounded-full "
       >
         Back
       </button>

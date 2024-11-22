@@ -76,18 +76,15 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 p-5 h-screen">
-      <h1
-        className="text-2xl font-bold mb-10 mt-4 cursor-pointer "
-        onClick={() => window.location.reload()}
-      >
+    <div className="w-64 p-5 h-screen   ">
+      <h1 className="text-2xl font-bold mb-10 mt-4 cursor-pointer ">
         React Store
       </h1>
 
-      <section>
+      <section className="">
         <input
           type="text"
-          className="border-2 rounded px-2 p-2 sm:mb-0"
+          className="border-2 rounded  px-2 p-2 sm:mb-0"
           placeholder="Search Product"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
