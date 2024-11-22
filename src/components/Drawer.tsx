@@ -17,13 +17,6 @@ const Drawer = () => {
     setIsOpen(!isOpen);
   };
 
-  const [bgColor, setBgColor] = useState("");
-
-  useEffect(() => {
-    const color = window.getComputedStyle(document.body).backgroundColor;
-    setBgColor(color);
-  }, []);
-
   const {
     searchQuery,
     setSearchQuery,
