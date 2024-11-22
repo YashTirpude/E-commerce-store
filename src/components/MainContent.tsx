@@ -3,6 +3,7 @@ import axios from "axios";
 import { useFilter } from "./FilterContext";
 import BookCard from "./BookCard";
 import { Tally3 } from "lucide-react";
+import Drawer from "./Drawer";
 
 const MainContent = () => {
   const { searchQuery, selectedCategory, minPrice, maxPrice, keyword } =
@@ -127,7 +128,8 @@ const MainContent = () => {
   };
 
   return (
-    <section className="xl:w-[55rem] lg:w-[55rem] md:w-full lg:ml-0 xs:ml-[7rem] sm:ml-10 sm:mx-28 md:ml-0 md:mr-14 xs:w-[30rem]  p-5  flex justify-center ">
+    <section className="xl:w-[55rem] lg:w-[55rem]  md:w-full lg:ml-0 xs:w-[35rem] sm:w-[30rem] sm:ml-10 sm:mx-28 md:ml-0 md:mr-14  p-5  flex justify-center ">
+      <Drawer />
       <div className="mb-5">
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="relative mb-5 mt-5">
@@ -165,7 +167,7 @@ const MainContent = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 xs:grid-cols-2 sm:gap-20 xs:gap-x-12  xs:ml-10 sm:ml-0   sm:grid-cols-3 md:w-[40rem] md:ml-0 lg:w-[52rem] md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-4 xs:grid-cols-2 sm:gap-20 xs:gap-x-15   sm:ml-0   sm:grid-cols-3 md:w-[40rem] md:ml-0 lg:w-[52rem] md:grid-cols-4 gap-5">
           {filteredProducts.map((product) => (
             <BookCard
               key={product.id}
@@ -177,7 +179,7 @@ const MainContent = () => {
           ))}
         </div>
 
-        <div className="flex flex-col xs:flex-row  xs:w-[28rem]   sm:flex-row justify-between items-center mt-5">
+        <div className="flex flex-col xs:flex-row  xs:w-[100%] sm:flex-row justify-between items-center mt-5">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}

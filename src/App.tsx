@@ -4,21 +4,23 @@ import MainContent from "./components/MainContent";
 import ProductPage from "./components/ProductPage";
 import TopSellers from "./components/TopSellers";
 import PopularBlogs from "./components/PopularBlogs";
+import Drawer from "./components/Drawer";
 
 function App() {
   return (
     <Router>
-      <div className="flex h-screen">
+      <div className="flex  h-screen">
         <Sidebar />
 
-        <div className="rounded w-full   flex justify-center  flex-wrap">
+        <div className="rounded    flex justify-center  flex-wrap">
           <Routes>
             <Route path="/" element={<MainContent />} />
             <Route path="/product/:id" element={<ProductPage />} />
           </Routes>
         </div>
+
         <div>
-          <label className="flex justify-end pt-3   cursor-pointer gap-2">
+          <label className="flex justify-end pt-3 xs:hidden sm:flex mr-10   h-fit  cursor-pointer gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -52,7 +54,6 @@ function App() {
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </label>
-
           <TopSellers />
           <PopularBlogs />
         </div>

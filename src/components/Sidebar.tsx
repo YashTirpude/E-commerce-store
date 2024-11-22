@@ -76,79 +76,81 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 p-5 h-screen  xs:hidden sm:block ">
-      <h1 className="text-2xl font-bold mb-10 mt-4 cursor-pointer ">
-        React Store
-      </h1>
+    <div>
+      <div className="w-64 p-5 h-screen  xs:hidden sm:block ">
+        <h1 className="text-2xl font-bold mb-10 mt-4 cursor-pointer ">
+          React Store
+        </h1>
 
-      <section>
-        <input
-          type="text"
-          className="border-2 rounded  px-2 p-2 sm:mb-0"
-          placeholder="Search Product"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-        <div className="flex justify-center items-center">
+        <section>
           <input
-            type="number"
-            className="border-2 mr-2 px-5 py-3 mb-3 w-full"
-            placeholder="Min"
-            value={minPrice ?? ""}
-            onChange={handleMinPriceChange}
+            type="text"
+            className="border-2 rounded  px-2 p-2 sm:mb-0"
+            placeholder="Search Product"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <input
-            type="number"
-            className="border-2  px-5 py-3 mb-5 mt-2 w-full"
-            placeholder="Max"
-            value={maxPrice ?? ""}
-            onChange={handleMaxPriceChange}
-          />
-        </div>
-
-        {/* Categories Section */}
-        <div className="mb-5">
-          <h2 className="text-xl font-semibold mb-3">Categories</h2>
-          <div>
-            {categories.map((category, index) => (
-              <label key={index} className="block mb-2">
-                <input
-                  type="radio"
-                  name="category"
-                  value={category}
-                  onChange={() => handleRadioChangeCategories(category)}
-                  checked={selectedCategory === category}
-                  className="mr-2 w-[16px] h-[16px]"
-                />
-                {category.toUpperCase()}
-              </label>
-            ))}
+          <div className="flex justify-center items-center">
+            <input
+              type="number"
+              className="border-2 mr-2 px-5 py-3 mb-3 w-full"
+              placeholder="Min"
+              value={minPrice ?? ""}
+              onChange={handleMinPriceChange}
+            />
+            <input
+              type="number"
+              className="border-2  px-5 py-3 mb-5 mt-2 w-full"
+              placeholder="Max"
+              value={maxPrice ?? ""}
+              onChange={handleMaxPriceChange}
+            />
           </div>
-        </div>
 
-        {/* Keywords Section */}
-        <div className="mb-5">
-          <h2 className="text-xl font-semibold mb-3">Keywords</h2>
-          <div>
-            {keywords.map((keyword, index) => (
-              <button
-                key={index}
-                onClick={() => handleKeywordClick(keyword)}
-                className="block mb-2 px-4 py-2 w-full text-left border rounded hover:bg-gray-200 hover:text-black"
-              >
-                {keyword.toUpperCase()}
-              </button>
-            ))}
+          {/* Categories Section */}
+          <div className="mb-5">
+            <h2 className="text-xl font-semibold mb-3">Categories</h2>
+            <div>
+              {categories.map((category, index) => (
+                <label key={index} className="block mb-2">
+                  <input
+                    type="radio"
+                    name="category"
+                    value={category}
+                    onChange={() => handleRadioChangeCategories(category)}
+                    checked={selectedCategory === category}
+                    className="mr-2 w-[16px] h-[16px]"
+                  />
+                  {category.toUpperCase()}
+                </label>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <button
-          onClick={handleResetFilters}
-          className="w-full mb-[4rem] py-2 bg-black text-white rounded mt-5"
-        >
-          Reset Filters
-        </button>
-      </section>
+          {/* Keywords Section */}
+          <div className="mb-5">
+            <h2 className="text-xl font-semibold mb-3">Keywords</h2>
+            <div>
+              {keywords.map((keyword, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleKeywordClick(keyword)}
+                  className="block mb-2 px-4 py-2 w-full text-left border rounded hover:bg-gray-200 hover:text-black"
+                >
+                  {keyword.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <button
+            onClick={handleResetFilters}
+            className="w-full mb-[4rem] py-2 bg-black text-white rounded mt-5"
+          >
+            Reset Filters
+          </button>
+        </section>
+      </div>
     </div>
   );
 };
