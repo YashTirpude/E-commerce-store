@@ -4,7 +4,6 @@ import MainContent from "./components/MainContent";
 import ProductPage from "./components/ProductPage";
 import TopSellers from "./components/TopSellers";
 import PopularBlogs from "./components/PopularBlogs";
-import Drawer from "./components/Drawer";
 
 function App() {
   return (
