@@ -23,16 +23,6 @@ export const FilterProvider: React.FC<{ children: ReactNode }> = ({
   const [minPrice, setMinPrice] = useState<number | undefined>(undefined);
   const [maxPrice, setMaxPrice] = useState<number | undefined>(undefined);
   const [keyword, setKeyword] = useState<string>("");
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const resetAllFilters = () => {
-    setSearchQuery("");
-    setSelectedCategory("");
-    setMinPrice(undefined);
-    setMaxPrice(undefined);
-    setKeyword("");
-    setCurrentPage(1);
-  };
 
   return (
     <FilterContext.Provider
