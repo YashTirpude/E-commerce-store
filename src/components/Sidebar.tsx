@@ -19,6 +19,7 @@ const Sidebar = () => {
     setMinPrice,
     maxPrice,
     setMaxPrice,
+
     setKeyword,
   } = useFilter();
 
@@ -78,7 +79,10 @@ const Sidebar = () => {
   return (
     <div>
       <div className="w-64 p-5 h-screen  xs:hidden sm:block ">
-        <h1 className="text-2xl font-bold mb-10 mt-4 cursor-pointer ">
+        <h1
+          className="text-2xl font-bold mb-10 mt-4 cursor-pointer "
+          onClick={() => location.reload()}
+        >
           React Store
         </h1>
 

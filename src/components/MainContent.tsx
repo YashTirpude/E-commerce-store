@@ -80,6 +80,7 @@ const MainContent = () => {
         return filteredProducts.sort((a, b) => a.price - b.price);
       case "popular":
         return filteredProducts.sort((a, b) => b.rating - a.rating);
+
       default:
         return filteredProducts;
     }
@@ -128,7 +129,7 @@ const MainContent = () => {
   };
 
   return (
-    <section className="xl:w-[55rem] lg:w-[55rem]  md:w-full lg:ml-0 xs:w-[35rem] sm:w-[30rem] sm:ml-10 sm:mx-28 md:ml-0 md:mr-14  p-5  flex justify-center ">
+    <section className="xl:w-[55rem] lg:w-[52rem]  md:w-full lg:ml-0 xs:w-[30rem] sm:w-[30rem] sm:ml-10 sm:mx-28 md:ml-0 md:mr-14   flex justify-center ">
       <Drawer />
       <div className="mb-5">
         <div className="flex flex-col sm:flex-row justify-between items-center">
