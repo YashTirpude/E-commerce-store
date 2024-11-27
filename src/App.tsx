@@ -4,14 +4,11 @@ import MainContent from "./components/MainContent";
 import ProductPage from "./components/ProductPage";
 import TopSellers from "./components/TopSellers";
 import PopularBlogs from "./components/PopularBlogs";
-import ThemeController from "./components/ThemeController";
 
 function App() {
   return (
     <Router>
       <div>
-        <ThemeController />
-
         <div className="flex  h-screen">
           <Sidebar />
           <div className="rounded    flex justify-center  flex-wrap">
