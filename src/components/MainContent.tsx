@@ -140,7 +140,10 @@ const MainContent = () => {
             onClick={() => location.reload()}
           />
         </div>
-        <div className=" flex flex-col sm:flex-row justify-between items-center">
+        <div
+          data-theme="luxury"
+          className=" flex flex-col sm:flex-row justify-between items-center"
+        >
           <div className="relative mb-5 mt-5">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -152,22 +155,22 @@ const MainContent = () => {
                 : filter.charAt(0).toUpperCase() + filter.slice(1)}
             </button>
             {dropdownOpen && (
-              <div className="absolute bg-white border border-gray-300 rounded mt-2 w-full sm:w-40">
+              <div className="absolute bg-[#0a0a0a]  border border-gray-300 rounded mt-2 w-full sm:w-40">
                 <button
                   onClick={() => setFilter("cheap")}
-                  className="block px-4 py-2 w-full text-left hover:bg-gray-200"
+                  className="block px-4 py-2 w-full text-left hover:bg-white hover:text-black"
                 >
                   Cheap
                 </button>
                 <button
                   onClick={() => setFilter("expensive")}
-                  className="block px-4 py-2 w-full text-left hover:bg-gray-200"
+                  className="block px-4 py-2 w-full text-left hover:bg-white hover:text-black"
                 >
                   Expensive
                 </button>
                 <button
                   onClick={() => setFilter("popular")}
-                  className="block px-4 py-2 w-full text-left hover:bg-gray-200"
+                  className="block px-4 py-2 w-full text-left hover:bg-white hover:text-black "
                 >
                   Popular
                 </button>
@@ -188,7 +191,7 @@ const MainContent = () => {
           ))}
         </div>
 
-        <div className="flex flex-col xs:flex-row  xs:w-[100%] sm:flex-row justify-between items-center mt-5">
+        <div className="flex flex-col xs:flex-row   xs:w-[100%] sm:flex-row justify-between items-center mt-5">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
