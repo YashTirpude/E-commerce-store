@@ -3,6 +3,7 @@ import axios from "axios";
 import { useFilter } from "./FilterContext";
 import BookCard from "./BookCard";
 import { Tally3 } from "lucide-react";
+import { Store } from "lucide-react";
 import Drawer from "./Drawer";
 
 const MainContent = () => {
@@ -129,7 +130,7 @@ const MainContent = () => {
   };
 
   return (
-    <section className="xl:w-[55rem] lg:w-[52rem]  md:w-full lg:ml-0 xs:w-[30rem] sm:w-[30rem] sm:ml-10 sm:mx-28 md:ml-0 md:mr-14   flex justify-center ">
+    <section className="xl:w-[55rem] lg:w-[52rem]   md:w-full lg:ml-0 xs:w-[33rem] sm:w-[30rem] sm:ml-10 sm:mx-28   flex justify-center ">
       <Drawer />
       <div className="mb-5">
         <div className="flex flex-col sm:flex-row justify-between items-center">
@@ -216,6 +217,10 @@ const MainContent = () => {
           </button>
         </div>
       </div>
+      <Store
+        className=" xs:block sm:hidden md:hidden w-auto h-8 mt-6 mr-4  "
+        onClick={() => location.reload()}
+      />
     </section>
   );
 };
