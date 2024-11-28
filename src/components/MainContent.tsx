@@ -130,10 +130,17 @@ const MainContent = () => {
   };
 
   return (
-    <section className="xl:w-[55rem] lg:w-[52rem]   md:w-full lg:ml-0 xs:w-[33rem] sm:w-[30rem] sm:ml-10 sm:mx-28   flex justify-center ">
-      <Drawer />
+    <section className="xl:w-[55rem] lg:mx-8   md:w-full  xs:w-[33rem] xs:mx-5  sm:ml-10 sm:mx-28   flex justify-center ">
       <div className="mb-5">
-        <div className="flex flex-col sm:flex-row justify-between items-center">
+        <div className="flex absolute w-[23rem]    sm:hidden   justify-between items-center ">
+          <Drawer />
+
+          <Store
+            className=" xs:block sm:hidden  w-auto h-8 mt-6 mr-4  "
+            onClick={() => location.reload()}
+          />
+        </div>
+        <div className=" flex flex-col sm:flex-row justify-between items-center">
           <div className="relative mb-5 mt-5">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -169,7 +176,7 @@ const MainContent = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 xs:grid-cols-2 sm:gap-20 xs:gap-x-15   sm:ml-0   sm:grid-cols-3 md:w-[40rem] md:ml-0 lg:w-[52rem] md:grid-cols-4 gap-5">
+        <div className=" grid grid-cols-4 xs:grid-cols-2 sm:gap-20 xs:gap-x-15   sm:ml-0   sm:grid-cols-3 md:w-[40rem] md:ml-0 lg:w-[52rem] md:grid-cols-4 gap-5">
           {filteredProducts.map((product) => (
             <BookCard
               key={product.id}
@@ -217,10 +224,6 @@ const MainContent = () => {
           </button>
         </div>
       </div>
-      <Store
-        className=" xs:block sm:hidden md:hidden w-auto h-8 mt-6 mr-4  "
-        onClick={() => location.reload()}
-      />
     </section>
   );
 };
