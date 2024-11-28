@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div>
-        <div className="flex  h-screen">
+        <div className="flex w-screen h-screen">
           <Sidebar />
           <div className="rounded    flex justify-center  flex-wrap">
             <Routes>
